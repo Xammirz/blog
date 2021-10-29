@@ -1,0 +1,23 @@
+{% load static %}
+<html>
+  <head>
+    <title>Django blog</title>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400"
+    rel="stylesheet">
+	<link href="{% static 'base.css' %}" rel="stylesheet">
+  </head>
+  <body>
+    <div>
+      <header>
+        <div class="nav-left">
+          <h1><a href="{% url 'index' %}">Главная</a></h1>
+        </div>
+        <div class="nav-right">
+          <a href="{% url 'post_new' %}">Добавить новый пост</a>
+        </div>
+      </header>
+      {% block content %}
+      {% endblock content %}
+    </div>
+  </body>
+</html>
